@@ -53,6 +53,8 @@ import countryCodesNum from 'currency-codes-polish/esm/numeric';
 ```
 # Scrape it yourself
 
-1. Clone this repo
-2. Run `npm install`
-3. Run `npm run scrape`.
+```
+git clone https://github.com/szydlovski/currency-codes-polish
+npm install
+npm run scrape
+```
