@@ -47,9 +47,9 @@ currencyCodesNum.find(({code}) => code === '756') =>
 ```
 This package also includes ESM formatted files available as:
 ```javascript
-import countryCodes from 'currency-codes-polish/esm';
-import countryCodesAlpha from 'currency-codes-polish/esm/alpha';
-import countryCodesNum from 'currency-codes-polish/esm/numeric';
+import currencyCodes from 'currency-codes-polish/esm';
+import currencyCodesAlpha from 'currency-codes-polish/esm/alpha';
+import currencyCodesNum from 'currency-codes-polish/esm/numeric';
 ```
 # Scrape it yourself
 
