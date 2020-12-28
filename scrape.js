@@ -13,14 +13,15 @@ async function build() {
 	);
 	const scrapedData = mergeScrapes(scrapedDataEn, scrapedDataPl);
 	const { full, alpha, numeric } = dataVariants(scrapedData);
+	const stringify = data => JSON.stringify(data, null, 2);
 	console.log('Saving files...');
 	for (const [filepath, data] of [
-		['codes.json', JSON.stringify(full, null, 2)],
-		['alpha/index.json', JSON.stringify(alpha, null, 2)],
-		['numeric/index.json', JSON.stringify(numeric, null, 2)],
-		['esm/index.js', esmify(JSON.stringify(full, null, 2))],
-		['esm/alpha/index.js', esmify(JSON.stringify(alpha, null, 2))],
-		['esm/numeric/index.js', esmify(JSON.stringify(numeric, null, 2))],
+		['codes.json', stringify(full)],
+		['alpha/index.json', stringify(alpha)],
+		['numeric/index.json', stringify(numeric)],
+		['esm/index.js', esmify(stringify(full))],
+		['esm/alpha/index.js', esmify(stringify(alpha))],
+		['esm/numeric/index.js', esmify(stringify(numeric))],
 	]) {
 		await fs.mkdir(path.dirname(filepath), { recursive: true });
 		await fs.writeFile(filepath, data);
