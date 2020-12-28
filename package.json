@@ -1,0 +1,23 @@
+{
+  "name": "currency-codes-polish",
+  "version": "0.1.0",
+  "description": "ISO 4217 currency codes with Polish names",
+  "main": "codes.json",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
+  "keywords": [
+    "currency codes",
+    "polish",
+    "poland",
+    "iso-4217",
+    "esm"
+  ],
+  "author": "Kamil Szydlowski",
+  "license": "MIT",
+  "repository": "https://github.com/szydlovski/currency-codes-polish",
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "jsdom": "^16.4.0"
+  }
+}
